@@ -1,0 +1,18 @@
+{
+  "name": "mmo-patterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "mmo-logger": "github:terkojones/mmo-logger"
+  },
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "keywords": [],
+  "author": "Terko Jones <terkojones@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "mmo-errors": "github:terkojones/mmo-errors"
+  }
+}
