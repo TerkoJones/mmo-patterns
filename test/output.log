@@ -16,8 +16,8 @@
 15) COMBINATORS: (\s*\+\s*)|(\s*~\s*)|(\s*>\s*)|(\s+)
 
 
-Test de ID para "#ELMT #main-id"
-match: "#ELMT"
+Test de ID para "#elmt #main-id"
+match: "#elmt"
   parsed: "elmt"
 match: "#main-id"
   parsed: "main-id"
@@ -172,7 +172,7 @@ match: "*.alerts"
   11) ""
   12) ""
   13) ""
-  parsed: "{ elmt: '*', classes: [Array], attrs: undefined, id: undefined }"
+  parsed: "{ elmt: '*', classes: [Array], attrs: null, id: null }"
 
 Test de COMBINATORS para "para > por  + segun  ~ sin mas"
 match: " > "
@@ -204,7 +204,7 @@ Test de parser <ELMT, ID, CLASSES, ATTR, COMBINATORS> para "DIV.main > input[typ
 {
   type: 13,
   name: 'ELMT',
-  value: { elmt: 'div', classes: [ 'main' ], attrs: undefined, id: undefined }
+  value: { elmt: 'div', classes: [ 'main' ], attrs: null, id: null }
 }
 { type: 15, name: 'COMBINATORS', value: '>' }
 {
@@ -212,8 +212,8 @@ Test de parser <ELMT, ID, CLASSES, ATTR, COMBINATORS> para "DIV.main > input[typ
   name: 'ELMT',
   value: {
     elmt: 'input',
-    classes: undefined,
+    classes: null,
     attrs: [ { ELMT: 'type', operator: '=', value: 'button' } ],
-    id: undefined
+    id: null
   }
 }

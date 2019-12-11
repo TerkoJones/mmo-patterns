@@ -18,7 +18,13 @@ const
 const
     NULL_PARSER = () => undefined;
 
-module.exports = class RegExpPatterns {
+module.exports = (patterns) => {
+    return new RegExpPatterns(patterns);
+}
+
+
+class RegExpPatterns {
+
     constructor(patterns) {
         let
             map = {},

@@ -37,9 +37,15 @@ module.exports = {
     },
     elmt_parser(match, pos) {
         if (!match[pos]) return null; //:)
-        let elmt = match[pos + 1].toLowerCase();
-        let rest = match[pos].substr(elmt.length);
-        let classes, attrs, id, parsed;
+        let
+            elmt = match[pos + 1].toLowerCase();
+        let
+            rest = match[pos].substr(elmt.length);
+        let
+            classes = null,
+            attrs = null,
+            id = null,
+            parsed;
         for (let match of this.iterator(this.ELMT_RESTRICTION, rest)) {
             parsed = this.parse(this.ELMT_RESTRICTION, match);
             if (parsed.classes) {

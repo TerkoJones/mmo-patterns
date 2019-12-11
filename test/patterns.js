@@ -1,7 +1,6 @@
-const RegExpPatterns = require('../index');
 const matchParser = require('./match-parsers');
 
-const patterns = module.exports = new RegExpPatterns({
+const patterns = module.exports = require('../index')({
     ALL: '\\*',
     NMCHAR: '[_a-zA-Z0-9-]',
     NMSTART: '[_a-zA-Z]',

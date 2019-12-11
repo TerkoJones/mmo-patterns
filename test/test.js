@@ -5,9 +5,9 @@ const log = require('mmo-logger')('output.log', {
 const patterns = require('./patterns1');
 log(patterns.toString());
 
+console.log(patterns.exec('CLASS', '.class'));
 
-
-log_test(patterns, patterns.ID, '#ELMT #main-id');
+log_test(patterns, patterns.ID, '#elmt #main-id');
 log_test(patterns, patterns.CLASSES, '.class.ELMT .otra.class.mas');
 log_test(patterns, patterns.STRING, 'texto libre "texto dobles comillas" \'texto comillas simples\'');
 log_test(patterns, patterns.EQUALS, '= *= ~=');
